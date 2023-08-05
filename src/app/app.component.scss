@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
+*{
+  padding: 0;
+  margin: 0;
+}
 
 .container {
   display: grid;
@@ -7,60 +11,98 @@
   gap: 15px; /* Espaçamento entre os elementos */
   align-items: center; /* Centraliza os elementos verticalmente */
   justify-items: center; /* Centraliza os elementos horizontalmente */
+  overflow: hidden;
 }
 
-
-.imagem-ilustrativa{
-
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-}
-
-.logo{
-    align-items: center;
-    max-width: 400px; /* Define a largura máxima da imagem */
-    height: auto; /* A altura será ajustada proporcionalmente para manter a proporção original */
-}
-
-.buttons {
+.lado-esquerdo {
   /* Estilos para a div que contém os botões */
   display: flex;
   flex-direction: column;
   gap: 10px; /* Espaçamento entre os botões */
-  
 }
 
-.botaoIniciarPedido{
-  font-family: 'Roboto', sans-serif;
+.imagem-ilustrativa {
+  display: flex; /* Utiliza display flex para ajustar a imagem */
+  align-items: center; /* Centraliza verticalmente */
+  justify-content: flex-end; /* Alinha a imagem no canto direito */
+  height: 100vh; /* A altura da div será igual à altura da janela (viewport) */
+}
+
+.imagem-ilustrativa img {
+  width: 100%; /* A imagem ocupa toda a largura disponível */
+  height: 100%; /* A imagem ocupa toda a altura disponível */
+  object-fit: cover; /* A imagem é redimensionada para cobrir todo o espaço sem perder a proporção */
+}
+
+.logo{
+    align-items: center;
+    max-width: 185px; /* Define a largura máxima da imagem */
+    height: auto; /* A altura será ajustada proporcionalmente para manter a proporção original */
+    margin-left: 100px;
+    padding-bottom: 40px;
+}
+
+/* Estilo para o botão */
+.botaoIniciarPedido {
+  display: flex; /* Utiliza display flex para posicionar os elementos em linha */
+  align-items: center; /* Centraliza verticalmente os elementos */
+  gap: 10px; /* Espaçamento entre o ícone e o texto */
   background: #6F2626;
   color: white;
-  font-size: 22px;
+  font-size: 25px;
+  border-radius: 27px;
   text-align: left;
-  padding-left: 2em; /* Espaçamento de 2 vezes o tamanho da fonte em relação à borda esquerda */
-  border-radius: 15px;
+  padding-left: 1em; /* Espaçamento de 2 vezes o tamanho da fonte em relação à borda esquerda */
   border: none;
-  width: 300px;
-  height: 65px;
+  text-decoration: none;
+  width: 275px;
+  height: 73px;
   margin: 40px;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
+  margin-top: 40px;
+}
+
+/* Estilo para o ícone */
+.botaoIniciarPedido img {
+  width: 30px; /* Ajuste a largura do ícone conforme desejado */
+  height: 30px; /* Ajuste a altura do ícone conforme desejado */
+}
+
+.botaoIniciarPedido .seta {
+  width: 15px; /* Ajuste a largura do ícone conforme desejado */
+  height: 15px; /* Ajuste a altura do ícone conforme desejado */
+  margin-left: auto; /* A seta é alinhada à direita do botão */
+  margin-right: 2vw;
 }
 
 .botaoChamarGarcom{
+  display: flex; /* Utiliza display flex para posicionar os elementos em linha */
+  align-items: center; /* Centraliza verticalmente os elementos */
+  gap: 10px; /* Espaçamento entre o ícone e o texto */
   background: #6F2626;
-  font-family: 'Roboto', sans-serif;
   color: white;
-  font-size: 22px;
-  border-radius: 15px;
+  font-size: 25px;
+  border-radius: 27px;
   text-align: left;
-  padding-left: 2em; /* Espaçamento de 2 vezes o tamanho da fonte em relação à borda esquerda */
+  padding-left: 1em; /* Espaçamento de 2 vezes o tamanho da fonte em relação à borda esquerda */
   border: none;
-  width: 300px;
-  height: 65px;
+  text-decoration: none;
+  width: 275px;
+  height: 73px;
   margin: 40px;
   margin-bottom: 10px;
   margin-top: 10px;
 }
 
+.botaoChamarGarcom img {
+  width: 30px; /* Ajuste a largura do ícone conforme desejado */
+  height: 30px; /* Ajuste a altura do ícone conforme desejado */
+}
+
+.botaoChamarGarcom .seta {
+  width: 15px; /* Ajuste a largura do ícone conforme desejado */
+  height: 15px; /* Ajuste a altura do ícone conforme desejado */
+  margin-left: auto; /* A seta é alinhada à direita do botão */
+  margin-right: 2vw;
+}
 
