@@ -1,45 +1,49 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
-*{
-  padding: 0;
-  margin: 0;
+* {
+  margin: 0; /* Remove o espaçamento (margin) padrão do corpo da página */
+  padding: 0; /* Remove o espaçamento (padding) padrão do corpo da página */
+  overflow: hidden; /* Remove a barra de rolagem do corpo da página */
 }
 
 .container {
   display: grid;
-  grid-template-columns: 1fr 1fr; /* Divide a tela em duas colunas de tamanho igual */
-  gap: 15px; /* Espaçamento entre os elementos */
-  align-items: center; /* Centraliza os elementos verticalmente */
-  justify-items: center; /* Centraliza os elementos horizontalmente */
-  overflow: hidden;
-}
-
-.lado-esquerdo {
-  /* Estilos para a div que contém os botões */
-  display: flex;
-  flex-direction: column;
-  gap: 10px; /* Espaçamento entre os botões */
+  grid-template-columns: 1fr auto; /* Ocupa todo o espaço disponível e ajusta o segundo elemento automaticamente */
+  align-items: center;
+  justify-content: flex-end; /* Centraliza o conteúdo horizontalmente */
+  gap: 15px;
+  overflow: hidden; /* Remove a barra de rolagem do container */
+  height: 100vh; /* Defina a altura total da página para centralizar verticalmente */
 }
 
 .imagem-ilustrativa {
-  display: flex; /* Utiliza display flex para ajustar a imagem */
-  align-items: center; /* Centraliza verticalmente */
-  justify-content: flex-end; /* Alinha a imagem no canto direito */
-  height: 100vh; /* A altura da div será igual à altura da janela (viewport) */
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 100%;
+  overflow: hidden; /* Remove a barra de rolagem da imagem */
 }
 
 .imagem-ilustrativa img {
-  width: 100%; /* A imagem ocupa toda a largura disponível */
-  height: 100%; /* A imagem ocupa toda a altura disponível */
-  object-fit: cover; /* A imagem é redimensionada para cobrir todo o espaço sem perder a proporção */
+  width: auto;
+  height: 100%;
+  object-fit: cover;
+}
+
+.lado-esquerdo {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
 }
 
 .logo{
+  display: flex;
+  align-items: center;
     align-items: center;
-    max-width: 185px; /* Define a largura máxima da imagem */
+    max-width: 200px; /* Define a largura máxima da imagem */
     height: auto; /* A altura será ajustada proporcionalmente para manter a proporção original */
-    margin-left: 100px;
-    padding-bottom: 40px;
+    margin-bottom: 30px;
 }
 
 /* Estilo para o botão */
@@ -106,3 +110,46 @@
   margin-right: 2vw;
 }
 
+@media (max-width: 1024px) and (max-height: 768px) {
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Divide a tela em duas colunas de tamanho igual */
+  gap: 15px; /* Espaçamento entre os elementos */
+  align-items: center; /* Centraliza os elementos verticalmente */
+  justify-items: center; /* Centraliza os elementos horizontalmente */
+  overflow: hidden;
+}
+
+.lado-esquerdo {
+  /* Estilos para a div que contém os botões */
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Espaçamento entre os botões */
+}
+
+.imagem-ilustrativa {
+  display: flex; /* Utiliza display flex para ajustar a imagem */
+  align-items: center; /* Centraliza verticalmente */
+  justify-content: flex-end; /* Alinha a imagem no canto direito */
+  height: 100vh; /* A altura da div será igual à altura da janela (viewport) */
+}
+
+.imagem-ilustrativa img {
+  width: 100%; /* A imagem ocupa toda a largura disponível */
+  height: 100%; /* A imagem ocupa toda a altura disponível */
+  object-fit: cover; /* A imagem é redimensionada para cobrir todo o espaço sem perder a proporção */
+}
+
+.logo{
+    align-items: center;
+    max-width: 185px; /* Define a largura máxima da imagem */
+    height: auto; /* A altura será ajustada proporcionalmente para manter a proporção original */
+
+}
+
+/* Estilo para o botão */
+.botaoIniciarPedido {
+  margin-top: 20px;
+}
+
+}
